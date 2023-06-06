@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "8f33a8d7-e825-4b01-9b2f-0e3df7f2a1df",
+		"name": "Session",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27543639"
+	},
+	"item": [
+		{
+			"name": "start",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "controller-req-obj",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Manav\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/getData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"getData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "controller-response -error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/error",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"error"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "controller - redirect",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/redirect/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"redirect",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ParseIntPipe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id1\": \"true\",\n    \"id2\": \"false\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/pipesBool/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"pipesBool",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ParseBoolPipe",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ParseUUID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"3ca0c8c4-996c-38b7-b4c2-463889a9db6d\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/pipesUUID/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"pipesUUID",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ParseArrayPipe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"2,3,4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/pipesArray",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"pipesArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pipesDTO",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"manav\",\n    \"email\": \"email@mail.com\",\n    \"number\": 9999999999,\n    \"address\":{\n        \"state\": \"Gujarat\",\n        \"city\": \"Ahmedabad\",\n        \"country\": \"India\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/pipesDTO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"pipesDTO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customPipe",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ExceptionFilter",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
